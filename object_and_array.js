@@ -87,3 +87,7 @@ function totalCost(array){
 const mytotalCost=totalCost(shopping);
 console.log(mytotalCost);
 
+//6--------Multi-layer discount price calculation
+//a.If ticket is less than 100 pay:100
+//b. If ticket are (100-200)--1st 100 are 100 tk and rest are 90tk
+//c.more than 200-----100-->100tk ,101-200--->90tk .more than 200-->70tk
