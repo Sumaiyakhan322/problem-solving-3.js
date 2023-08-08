@@ -33,3 +33,57 @@ for(let i=1;i<=50;i++){
         console.log(i);
     }
 }
+
+//3---------Use add and multiplication to calculate wood requirements
+// perChair=3cft
+//perTable=5cft
+//perBed=10cft
+function woodRequire(chair,table,bed){
+    const perChair=3;
+    const perTable=5;
+    const perBed=10;
+    const total=perChair*chair+perTable*table+perBed*bed;
+    return total;
+}
+let myRequire=woodRequire(1,1,1);
+console.log(myRequire);
+
+//4---------- Find the cheapest phone from an array of phone objects
+const phones=[
+    {name:"Iphone",price:90000,color:"Black"},
+    {name:"Samsung",price:5000,color:"Black"},
+    {name:"Poko",price:20000,color:"Black"},
+    {name:"Oppo",price:10000,color:"Black"},
+]
+function cheapestPrice(phone){
+    cheapest=phone[0];
+    for(i=0;i<phone.length;i++){
+        let element=phone[i];
+        if(element.price<cheapest.price){
+           cheapest=element;
+        }
+    }
+    return cheapest;
+}
+const myPhone=cheapestPrice(phones);
+console.log(myPhone);
+
+//5--------Calculate the total cost of the products in a shopping cart
+
+const shopping=[
+    {name:"D",price:900,color:"Black" ,quantity:7},
+    {name:"C",price:500,color:"Black" ,quantity:4},
+    {name:"B",price:200,color:"Black"  ,quantity:2},
+    {name:"A",price:100,color:"Black"  ,quantity:2},
+]
+function totalCost(array){
+     total=0;
+    for(let i=0;i<array.length;i++){
+        element=array[i];
+         total=total+(element.price*element.quantity)
+    }
+    return total;
+}
+const mytotalCost=totalCost(shopping);
+console.log(mytotalCost);
+
