@@ -212,3 +212,80 @@ function isValidPhotoName(photoName, imageExtensions){
 
 const photo = "image.svg";
 const extensions = [".jpg",".JPEG",".png",".gif",".ico"];
+
+
+//9  count consonet ,vowel and space in a string
+function findVowel(s){
+
+    if(typeof s !== "string"){
+        return "please provide me a string"
+    }
+
+    let vowel = 0;
+    let consonent = 0;
+    let space = 0;
+    let vowelArray = []
+
+    for(let i=0; i<s.length; i++){
+        // a e i o u 
+        let char = s[i].toLowerCase();
+
+        if(char === 'a' || char === 'e' || char === 'i' || char === "o" || char === "u"){
+            vowel++;
+            vowelArray.push(char)
+        }else if(char !== " "){
+            consonent++
+        }else{
+            space++
+        }
+    }
+
+    const obj ={
+        vowelCount: vowel,
+        consonentCount:consonent,
+        spaceCount:space,
+        vowelArray: vowelArray
+    }
+
+    return obj;
+
+}
+
+
+const sentence = "the Name Of Our country is bangladesh"
+console.log(findVowel(sentence));
+
+//10.sum of array
+function sumOfArray(arr){
+
+        let sum = 0;
+    
+         for(let i=0; i<arr.length; i++){
+             sum = sum + arr[i]
+         }
+         return sum
+     }
+    
+     const nums = [1,2,3,4,5];
+     const total = sumOfArray(nums)
+     console.log(total);
+
+
+//12.sum of odd numbers
+     
+function sumOfOdds(arr){
+         let sum = 0;
+    
+     for(let item of arr){
+     if(item%2 !== 0){
+           sum = sum + item
+         }
+      }
+     return sum;
+    
+   }
+    
+     const numbers = [1,2,3,4,5,6,7,8,9];
+    
+    const total2 = sumOfOdds(numbers)
+     console.log(total2)
