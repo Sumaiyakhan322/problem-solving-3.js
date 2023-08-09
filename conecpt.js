@@ -288,4 +288,23 @@ function sumOfOdds(arr){
      const numbers = [1,2,3,4,5,6,7,8,9];
     
     const total2 = sumOfOdds(numbers)
-     console.log(total2)
+     console.log(total2);
+
+     //13. 2nd largest numbver in array
+     function secondLargest(arr) {
+        var largerest = arr[0];
+        var largest2nd = 0;
+        
+        for(var i=0; i<arr.length; i++) {
+          if(arr[i] > largerest) {
+            largest2nd = largerest;
+           largerest = arr[i];
+          }
+          else if(arr[i] > largest2nd && arr[i] !=largerest) {
+                  largest2nd = arr[i];}
+          
+        }
+      
+        return largest2nd;
+      }
+      console.log(secondLargest([1,678,5,10]));
